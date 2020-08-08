@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+<Resource 
+		name="jdbc/LocationDB" 
+		auth="Container" 
+		type="javax.sql.DataSource" 
+		driverClassName="org.hsqldb.jdbc.JDBCDriver" 
+		url="jdbc:hsqldb:file:/var/hsqldb/database" 
+		username="sa" 
+		password="sa"
+	 />
+
+</Context>
