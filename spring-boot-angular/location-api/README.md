@@ -17,6 +17,7 @@ DONT Forget this!
 
 ## Build Docker Image
 
+docker build -t minlwin/location-api .
 
 ## Run Docker Image
 

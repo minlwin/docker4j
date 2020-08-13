@@ -13,15 +13,24 @@ ENV POSTGRES_PASSWORD=location
 EXPOSE 5432/tcp
 
 ## Build Docker Images
-
 docker build -t minlwiin/location-postgres .
 
 
 ## Run Docker Image
+docker run -d --name location-postgres minlwin/location-postgres
 
-docker run -d --name location-pgs minlwin/location-postgres
+### Run Container within a network
+docker run -d --name location-postgres  --network location minlwin/location-postgres
+
+### Detach from a network
+
+### Attach to a network
 
 
 ## Connect to Container
 
-docker exec -it location-pgs ash
+docker exec -it location-postgres ash
+
+## Stop Container
+
+docker stop location-postgres
