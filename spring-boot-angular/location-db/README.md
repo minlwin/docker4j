@@ -1,1 +1,1 @@
-# Docker Demo for PostgreSQL DB Image
+# PostgreSQL DB Image
