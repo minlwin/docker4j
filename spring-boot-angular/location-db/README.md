@@ -15,7 +15,6 @@ EXPOSE 5432/tcp
 ## Build Docker Images
 docker build -t minlwiin/location-postgres .
 
-
 ## Run Docker Image
 docker run -d --name location-postgres minlwin/location-postgres
 
