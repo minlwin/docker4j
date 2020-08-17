@@ -21,15 +21,8 @@ docker run -d --name location-postgres minlwin/location-postgres
 ### Run Container within a network
 docker run -d --name location-postgres  --network location minlwin/location-postgres
 
-### Detach from a network
-
-### Attach to a network
-
-
 ## Connect to Container
-
 docker exec -it location-postgres ash
 
 ## Stop Container
-
 docker stop location-postgres
