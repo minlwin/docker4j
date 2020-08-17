@@ -4,9 +4,9 @@
 ```
 FROM postgres:alpine
 
-ENV POSTGRES_DB=words
-ENV POSTGRES_USER=words
-ENV POSTGRES_PASSWORD=words
+ENV POSTGRES_DB=qustions
+ENV POSTGRES_USER=qustions
+ENV POSTGRES_PASSWORD=qustions
 
 EXPOSE 5432/tcp
 ```
