@@ -1,4 +1,4 @@
-# Docker Demo
+# Spring Boots, Postgres DB, Angular on Docker
 
 This project will learn how to create containers and how to configure network for host to connect containers.
 
