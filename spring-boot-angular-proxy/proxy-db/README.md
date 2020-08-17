@@ -23,5 +23,5 @@ docker run -d --name proxy-db -v proxy-database:/var/lib/postgresql/data minlwin
 
 ## Connect to Container
 ```
-docker exec -it proxy-db 
-``
+docker exec -it proxy-db ash
+```
