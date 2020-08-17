@@ -1,0 +1,7 @@
+FROM postgres:alpine
+
+ENV POSTGRES_DB=words
+ENV POSTGRES_USER=words
+ENV POSTGRES_PASSWORD=words
+
+EXPOSE 5432/tcp
