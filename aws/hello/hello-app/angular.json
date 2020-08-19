@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "proxy-app": {
+    "hello-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/proxy-app",
+            "outputPath": "dist/hello-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,10 +50,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/tailwind.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/semantic-ui-css/semantic.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/semantic-ui-css/semantic.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -89,18 +92,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "proxy-app:build"
+            "browserTarget": "hello-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "proxy-app:build:production"
+              "browserTarget": "hello-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "proxy-app:build"
+            "browserTarget": "hello-app:build"
           }
         },
         "test": {
@@ -137,19 +140,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "proxy-app:serve"
+            "devServerTarget": "hello-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "proxy-app:serve:production"
+              "devServerTarget": "hello-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "proxy-app",
+  "defaultProject": "hello-app",
   "cli": {
-    "analytics": "37a97f10-36b5-44a3-8218-4a25dca6c60c"
+    "analytics": "d49131ae-d640-4427-a42e-5b8ef7fd33fa"
   }
 }
