@@ -3,30 +3,39 @@
   <div class="ui padded stacked mt-4 segment">
     <h1>Say Hello</h1>
 
-    <form action="#" class="ui form">
+    <form [formGroup]="form" class="ui form">
 
       <div class="two fields">
         <div class="field">
 
           <label for="messsage">Message</label>
-          <input type="text" id="message" placeholder="Enter Message">
+          <input formControlName="message" type="text" id="message" placeholder="Enter Message">
         </div>
 
         <div class="field">
           <label for="user">User</label>
-          <input type="text" id="user" placeholder="User Name">
+          <input formControlName="user" type="text" id="user" placeholder="User Name">
         </div>
       </div>
       <div class="field">
-        <button class="ui icon labeled red  button">
+        <button (click)="sendMessage()" [disabled]="!form.valid" class="ui icon labeled red  button">
           <i class="send icon"></i>
           Send
         </button>
       </div>
 
     </form>
-
   </div>
+
+  <div class="ui hidden divider"></div>
+
+  <h3>Hello Messages</h3>
+
+  <div class="ui padded segment" *ngFor="let item of list">
+    <h4><i class="user icon"></i> {{item.user}}</h4>
+    <p>{{item.message}}</p>
+  </div>
+
 </div>
 
 <router-outlet></router-outlet>
