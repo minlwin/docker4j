@@ -1,0 +1,7 @@
+{	
+	"properties": [
+		{ "name" : "app.jdc.thorn.jwt.name" },
+		{ "name" : "app.jdc.thorn.jwt.issuer" },
+		{ "name" : "app.jdc.thorn.jwt.minutes" }
+	]
+}
